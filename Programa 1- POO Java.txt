@@ -1,0 +1,56 @@
+Programa 1
+
+public class ProgramaCarro1 {
+	public static void main(String[] args) {
+    	Carro carroEsportivo = new CarroEsportivo();
+    	Carro carroPopular = new CarroPopular();
+
+    	carroEsportivo.andar();
+    	carroEsportivo.buzinar();
+    	carroEsportivo.parar();
+
+    	System.out.println();
+
+    	carroPopular.andar();
+    	carroPopular.buzinar();
+    	carroPopular.parar();
+	}
+}
+
+class Carro {
+	public void andar() {
+    	System.out.println("O carro está andando");
+	}
+
+	public void parar() {
+    	System.out.println("O carro parou");
+	}
+
+	public void buzinar() {
+    	System.out.println("Buzina padrão: Bii Bii");
+	}
+}
+
+class CarroEsportivo extends Carro {
+	@Override
+	public void buzinar() {
+    	System.out.println("Buzina esportiva: Fom Fom!");
+	}
+
+	@Override
+	public void andar() {
+    	System.out.println("O carro esportivo está acelerando rápido!");
+	}
+}
+
+class CarroPopular extends Carro {
+	@Override
+	public void buzinar() {
+    	System.out.println("Buzina simples: Beep Beep!");
+	}
+
+	@Override
+	public void andar() {
+    	System.out.println("O carro popular está andando normalmente.");
+	}
+}
